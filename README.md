@@ -22,3 +22,7 @@ Pass in:
  - `acceptHeader` The request Accept header.
 
 Returns a `Stat` object with the `.path` string added. Will return `null` if no matching file is found.
+
+### In the browser
+
+Run `npm run build` to output `dist.js`. This bundle will set `window.datServeResolvePath()` when included.
