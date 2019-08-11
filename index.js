@@ -10,7 +10,7 @@ const parseDatUrl = require('parse-dat-url')
 function acceptHeaderExtensions (accept) {
   var exts = []
   var parts = (accept || '').split(',')
-  if (parts.includes('text/html') || (parts.length === 1 && parts[0] === '*/*')) exts.push('.html')
+  if (parts.includes('text/html') || (parts.length === 1 && parts[0] === '*/*')) exts = exts.concat(['.html', '.md'])
   if (parts.includes('text/css')) exts.push('.css')
   if (parts.includes('image/*') || parts.includes('image/apng')) exts = exts.concat(['.png', '.jpg', '.jpeg', '.gif'])
   return exts
